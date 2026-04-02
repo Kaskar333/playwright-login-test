@@ -5,7 +5,7 @@ def test_login():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        page.goto("file:///c:/Users/user/Desktop/cicd/index.html")
+        page.goto("http://localhost:3000/index.html")
 
         page.fill("#email", "kaskar@gmail.com")
         page.fill("#password", "445566")
