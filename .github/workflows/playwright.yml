@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -20,12 +21,6 @@ jobs:
       run: |
         pip install pytest playwright
         playwright install --with-deps
-
-    - name: Start server
-      run: |
-        npm install -g http-server
-        http-server . -p 3000 &
-        sleep 3
 
     - name: Run tests
       run: pytest -s

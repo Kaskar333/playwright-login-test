@@ -5,7 +5,7 @@ def test_login():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        page.goto("http://localhost:3000/index.html")
+        page.goto("https://login-form-theta-five.vercel.app/")
 
         page.fill("#email", "kaskar@gmail.com")
         page.fill("#password", "445566")
