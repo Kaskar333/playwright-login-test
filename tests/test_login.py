@@ -8,7 +8,7 @@ def test_login():
         page.goto("https://login-form-theta-five.vercel.app/")
 
         page.fill("#email", "kaskar@gmail.com")
-        page.fill("#password", "445566")
+        page.fill("#password", "123123")
         page.click("#loginBtn")
 
         assert page.locator("h1").inner_text() == "Welcome Back"
