@@ -12,7 +12,7 @@ def test_login():
         page.click("#loginBtn")
 
         expect(page.locator("h1")).to_have_text("Welcome Back")
-        
+
         browser.close()
 
 def test_login_fail():
@@ -26,7 +26,7 @@ def test_login_fail():
         page.fill("#password", "445566")
         page.click("#loginBtn")
 
-        expect(page.locator("#passErr")).to_have_text("Incorrect password. Please try again.")
+        expect(page.locator("div#passErr")).to_have_text("Incorrect password. Please try again.")
 
 
         browser.close()
